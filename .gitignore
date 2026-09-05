@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Local agent tooling, review captures, and environment files
+.agents/
+.codex/
+artifacts/
+.env
+.env.*
+!.env.example

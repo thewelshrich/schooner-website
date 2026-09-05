@@ -1,0 +1,25 @@
+---
+const { title, lead } = Astro.locals.starlightRoute.entry.data
+---
+<div class="docs-title">
+  <h1 id="_top">{title}</h1>
+  {lead && <p>{lead}</p>}
+</div>
+<style>
+  .docs-title { position: relative; isolation: isolate; padding: 2.75rem 0 2.25rem; }
+  .docs-title::before {
+    content: ''; position: absolute; z-index: -1; pointer-events: none;
+    inset: -1.5rem calc(-1 * var(--sl-content-pad-x)) 0;
+    background: linear-gradient(90deg, rgba(7,17,22,.9), rgba(7,17,22,.4)), url('/hero_ocean-poster.jpg') center 65% / cover;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 70%, transparent);
+    opacity: .8;
+  }
+  h1 { color: var(--sl-color-white); max-width: 19ch; margin: 0; font-size: clamp(2.5rem, 4vw, 3.4rem); line-height: 1.08; font-weight: 700; letter-spacing: -.035em; text-wrap: balance; }
+  p { max-width: 47ch; margin: 1.35rem 0 0; font-size: 1.125rem; line-height: 1.7; color: var(--sl-color-gray-1); }
+  :global([data-theme='light']) .docs-title::before { opacity: .15; background-image: linear-gradient(90deg, #f7faf9, transparent), url('/hero_ocean-poster.jpg'); }
+  @media (max-width: 50rem) {
+    .docs-title { padding-block: 1.5rem; }
+    h1 { font-size: 2.5rem; }
+    p { font-size: 1.0625rem; }
+  }
+</style>

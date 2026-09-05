@@ -1,0 +1,60 @@
+:root {
+  --sl-font: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sl-color-accent-low: #123731;
+  --sl-color-accent: #73d4be;
+  --sl-color-accent-high: #a8ecdf;
+  --sl-color-white: #f4f7f6;
+  --sl-color-gray-1: #e0e9e7;
+  --sl-color-gray-2: #b6c7c7;
+  --sl-color-gray-3: #8b9e9f;
+  --sl-color-gray-4: #526668;
+  --sl-color-gray-5: #23383d;
+  --sl-color-gray-6: #101f25;
+  --sl-color-black: #071116;
+  --sl-color-bg-nav: #071116;
+  --sl-color-bg-sidebar: #081319;
+  --sl-content-width: 46rem;
+  --sl-sidebar-width: 16.5rem;
+  --sl-text-h1: 2.65rem;
+  --sl-text-h2: 1.5rem;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #d8f1e9;
+  --sl-color-accent: #186653;
+  --sl-color-accent-high: #114b3f;
+  --sl-color-white: #102b32;
+  --sl-color-gray-1: #203b43;
+  --sl-color-gray-2: #38545b;
+  --sl-color-gray-3: #536d73;
+  --sl-color-gray-4: #839c9f;
+  --sl-color-gray-5: #c1d2d1;
+  --sl-color-gray-6: #e9f0ef;
+  --sl-color-gray-7: #f3f7f6;
+  --sl-color-black: #fcfdfc;
+  --sl-color-bg-nav: #f7faf9;
+  --sl-color-bg-sidebar: #f7faf9;
+}
+h1, h2, h3 { letter-spacing: -.025em; }
+.sl-markdown-content { line-height: 1.8; }
+
+.sl-markdown-content :is(h2,h3):not(:first-child) { margin-top: 2.5rem; }
+.sl-markdown-content .expressive-code { margin-block: 1.5rem; }
+.sl-markdown-content a { text-underline-offset: .22em; }
+.sl-markdown-content aside { border-radius: .35rem; }
+.pagination-links a { box-shadow: none; border-radius: .4rem; }
+@media (max-width: 50rem) {
+  :root { --sl-text-h1: 2rem; }
+
+}
+
+/* Carry the ocean identity in the opening composition; keep articles quiet. */
+.content-panel + .content-panel { border-top: 0; }
+.sidebar-content { background: linear-gradient(180deg, transparent 60%, rgba(104,117,137,.09)); }
+[aria-current='page'] { background: var(--sl-color-accent-low) !important; color: var(--sl-color-accent-high) !important; font-weight: 650; }
+.sl-markdown-content .starlight-aside { border: 1px solid var(--sl-color-gray-5); background: var(--sl-color-gray-6); color: var(--sl-color-gray-1); }
+.sl-markdown-content .starlight-aside__title { color: var(--sl-color-accent-high); }
+.sl-markdown-content details { border: 1px solid var(--sl-color-gray-5); border-radius: .3rem; padding: .9rem 1.1rem; }
+.sl-markdown-content summary { cursor: pointer; font-weight: 600; color: var(--sl-color-white); }
+.sl-markdown-content details[open] summary { margin-bottom: 1rem; }
+.sl-markdown-content pre { box-shadow: none; }
+.sl-markdown-content :is(h2,h3) { scroll-margin-top: 2rem; }

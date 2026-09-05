@@ -1,0 +1,19 @@
+{
+  "name": "schooner-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "docs:check": "node scripts/check-docs-sources.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.0",
+    "astro": "^7.3.1",
+    "ogl": "^1.0.11"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
