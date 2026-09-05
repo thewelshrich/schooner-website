@@ -1,8 +1,11 @@
 import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
+import { socialImageHead } from './src/lib/social.mjs'
+
+const site = process.env.PUBLIC_SITE_URL || 'https://schooner.sh'
 
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || 'https://schooner.sh',
+  site,
   output: 'static',
   devToolbar: { enabled: false },
   build: { format: 'directory' },
@@ -11,6 +14,7 @@ export default defineConfig({
       title: 'Schooner',
       description: 'Learn to set up persistent remote development with Schooner, SSH, Git, and tmux.',
       favicon: '/favicon.ico',
+      head: socialImageHead(site),
       customCss: ['./src/styles/docs.css'],
       components: { SiteTitle: './src/components/docs/SiteTitle.astro', PageTitle: './src/components/docs/PageTitle.astro' },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/thewelshrich/schooner' }],

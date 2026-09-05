@@ -1,0 +1,4 @@
+Schooner social preview, copied unchanged from the Schooner CLI:
+https://github.com/thewelshrich/schooner/tree/main/docs/assets
+Adapted upstream from maintainer-owned Schooner brand assets.
+See schooner-social-preview.LICENSE.txt for the upstream Apache 2.0 licence.
